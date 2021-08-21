@@ -10,11 +10,11 @@ This repo holds my C code and notes from Pluralsight courses.
 
 ### How to create a new build task
 Terminal -> Configure Default Build Task... -> C/C++ cl.exe build active file
-  - Creates a `tasks.json` file with build instructions for the compiler
+  - Creates a [`tasks.json`](https://code.visualstudio.com/docs/cpp/config-msvc#_build-helloworldcpp) file with build instructions for the compiler
   
 ### How to configure the debugger
 Run -> Add Configuration... -> C++ (Windows) -> cl.exe
-  - Creates a `launch.json` file
+  - Creates a [`launch.json`](https://code.visualstudio.com/docs/cpp/launch-json-reference) file with debugger settings
 
 ### Chosen conventions to follow
 - Curly braces: [K&R style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)
