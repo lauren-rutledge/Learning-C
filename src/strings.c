@@ -63,7 +63,7 @@ int main(void)
     strcat_s(safeMessage, 100, name);
     strcat_s(safeMessage, 100, " is ");
     strcat_s(safeMessage, 100, "learning C.");
-    // Alternative, we can use a variable for the buffer size:
+    // Alternative, we can use a variable for the buffer size (preferred):
     strcat_s(safeMessage, sizeof(safeMessage), "\nGoodbye.");
 
     // These safe versions stop writing characters when the buffer size is reached
@@ -73,5 +73,7 @@ int main(void)
     // It also appends a \n at the end
     puts(safeMessage);
 
+    // ** Note, both of these versions of string functions are considered old. 
+    // The newer standard seems to be strncat, strncpy... We will explore those later. **
     return 0;
 }
