@@ -36,7 +36,7 @@ int main(void)
     strcat(destination, source);
 
     // To get the string "{inputName} is learning C.", instead of doing something like
-    //     var message = inputName + " is " + "learning C."
+    // var message = inputName + " is " + "learning C."
     // You would do:
     char message[100];
     strcpy(message, inputName);
