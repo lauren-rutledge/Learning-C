@@ -16,6 +16,10 @@ Terminal -> Configure Default Build Task... -> C/C++ cl.exe build active file
 Run -> Add Configuration... -> C++ (Windows) -> cl.exe
   - Creates a `launch.json` file
 
+### Chosen conventions to follow
+- Curly braces: [K&R style](https://en.wikipedia.org/wiki/Indentation_style#K&R_style)
+- File names: [snake_case](https://en.wikipedia.org/wiki/Snake_case)
+
 
 ## Errors/Resolutions
 - `cl.exe is not recognized` when running the application
