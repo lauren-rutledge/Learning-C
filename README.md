@@ -1,7 +1,6 @@
 # Learning-C
 This repo holds my C code and notes from Pluralsight courses.
-
-
+- [Getting Started with the C Language](https://app.pluralsight.com/library/courses/getting-started-c-language/table-of-contents)
 
 ### Create a new or open an existing project
 1. Open Developer Command Prompt for Visual Studio
@@ -21,6 +20,12 @@ Run -> Add Configuration... -> C++ (Windows) -> cl.exe
 - File names: [snake_case](https://en.wikipedia.org/wiki/Snake_case)
 
 
-## Errors/Resolutions
+## Bugs/Errors/Resolutions
 - `cl.exe is not recognized` when running the application
   - Make sure VS code was launched from the developer command prompt
+- Strings are prepended with random chars before calling `strcat` or `strcat_s`
+  - Initialize the string (or at least the first char) to empty before attempting to add to it.
+    ```c
+    char message[100];
+    message[0] = '\0';
+    ```
