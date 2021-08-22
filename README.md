@@ -29,3 +29,5 @@ Run -> Add Configuration... -> C++ (Windows) -> cl.exe
     char message[100];
     message[0] = '\0';
     ```
+- [`benign redefinition of type. A type is redefined in a manner that has no effect on the generated code.`](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4142?view=msvc-160) compiler error
+  - If you are calling a function you wrote, make sure it is above the calling function in the file (defined first).
