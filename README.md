@@ -1,7 +1,6 @@
 # Learning-C
 This repo holds my C code and notes from Pluralsight courses.
-
-
+- [Getting Started with the C Language](https://app.pluralsight.com/library/courses/getting-started-c-language/table-of-contents)
 
 ### Create a new or open an existing project
 1. Open Developer Command Prompt for Visual Studio
