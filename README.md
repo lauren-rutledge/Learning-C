@@ -20,6 +20,12 @@ Run -> Add Configuration... -> C++ (Windows) -> cl.exe
 - File names: [snake_case](https://en.wikipedia.org/wiki/Snake_case)
 
 
-## Errors/Resolutions
+## Bugs/Errors/Resolutions
 - `cl.exe is not recognized` when running the application
   - Make sure VS code was launched from the developer command prompt
+- Strings are prepended with random chars before calling `strcat` or `strcat_s`
+  - Initialize the string (or at least the first char) to empty before attempting to add to it.
+    ```c
+    char message[100];
+    message[0] = '\0';
+    ```
