@@ -6,6 +6,10 @@
 
 int main(void)
 {
+    //
+    // ----------------- Basic string functions -----------------
+    //
+
     // C# equivalent: string name = "Connie";
     char sampleName[] = "Connie";
     // All strings in C are null terminated, so the string "Connie" will occupy 
@@ -75,5 +79,40 @@ int main(void)
 
     // ** Note, both of these versions of string functions are considered old. 
     // The newer standard seems to be strncat, strncpy... We will explore those later. **
+
+
+    //
+    // ----------------- Size vs Length -----------------
+    //
+    
+    // ** Size measures the maximum capacity of the allocated string buffer **
+    // ** Length is the number of valid chars stored in the buffer excluding the terminating null char **
+
+    // So for a 10 byte string:
+    char sample[10];
+    // sample looks like:
+    // [ ][ ][ ][ ][ ][ ][ ][ ][ ][ ]
+    // If we copy a string into this buffer:
+    strcpy_s(sample, sizeof(sample), "sample");
+    // sample now looks like:
+    // [s][a][m][p][l][e][\0][ ][ ][ ]
+    // -----------------^ if you want to get the length of this string, you can do:
+    strlen(sample); // returns 6 (excludes null terminating char)
+
+    // Let's test it out:
+    printf("Please enter a string: ");
+    char test[40];
+    scanf("%39s", test);
+    int length = strlen(test);
+    int size = sizeof(test);
+    printf("\nLength = %d, Size = %d \n", length, size);
+
+    // Note: For international text or emojis, ASCII is not enough. You can still use a 
+    // null-terminated char array for strings storing international text. But to do this,
+    // we have to encode our strings using the Unicode UTF-8 format. This encoding is
+    // backwards compatible with ASCII and will work with functions like strcpy and strcat
+    // because they still have null-terminated chars. Just be aware that these chars can 
+    // take up more than one char/byte.
+
     return 0;
 }
