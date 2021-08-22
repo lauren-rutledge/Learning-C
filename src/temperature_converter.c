@@ -1,5 +1,12 @@
 #include <stdio.h> // Required for printf and scanf
 
+// This is considered the "function prototype/declaration" instead of C#'s "method signature"
+float ConvertToCelcius(float temperatureInFahrenheit) 
+{
+    float temperatureInCelsius = (temperatureInFahrenheit - 32.0) * 5.0 / 9.0;
+    return temperatureInCelsius;
+}
+
 int main(void) 
 {
     /*
@@ -28,20 +35,10 @@ int main(void)
         float tempInC = ConvertToCelcius(tempInF);
         // .1 limits decimal places to 1 digit, 5.1 does same as well as 
         // specifying the number(s) before the digit has to occupy 5 spaces
-        //printf(" %.1f F     |     %5.1f C \n", tempInF, tempInC);
-        printf("%f      ", 1.00);
-        printf("%f \n", tempInC);
+        printf(" %.1f F      |      %5.1f C \n", tempInF, tempInC);
     }
     
     puts("----------------------------");
 
     return 0;
-}
-
-// This is considered the "function prototype/declaration" instead of C#'s "method signature"
-float ConvertToCelcius(float temperatureInFahrenheit) 
-{
-    //float temperatureInCelsius = (temperatureInFahrenheit - 32.0) * 5.0 / 9.0;
-    //return temperatureInCelsius;
-    return 17.0;
 }
