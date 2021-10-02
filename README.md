@@ -32,3 +32,6 @@ Run -> Add Configuration... -> C++ (Windows) -> cl.exe
     ```
 - [`benign redefinition of type. A type is redefined in a manner that has no effect on the generated code.`](https://docs.microsoft.com/en-us/cpp/error-messages/compiler-warnings/compiler-warning-level-1-c4142?view=msvc-160) compiler error
   - If you are calling a function you wrote, make sure it is above the calling function in the file (defined first).
+- `expression must be a modifiable lvalue`
+  - `lvalue` means "left value" -- it should be assignable. Can get this error when the left type is an array (versus something like a pointer). For an array, instead of assigning, use `strcpy`. 
+  - https://stackoverflow.com/a/6008756/7680801
