@@ -6,7 +6,7 @@ Arrays:
       int arr[5][4]; or int arr[10][5][2];
 Pointers:
     - A variable that stores the address of another variable where this address
-      is the memory location where the variable's value is stored .
+      is the memory location where the variable's value is stored.
 */
     int main() 
     {
